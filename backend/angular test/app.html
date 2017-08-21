@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset = "UTF-8">
+
+ <link rel="stylesheet" type="text/css" href="../css/style.css">
+ <script type = "text/javascript" src="../bower_components/angular/angular.js"></script>
+ <script type = "text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+
+ <!-- route -->
+ <script type= "text/javascript" src="app.js"></script>
+ <script type = "text/javascript" src="routing/routing.js"></script>
+
+
+ <!--controllers-->
+ <script type="text/javascript" src ="controller/categoryController.js"></script>
+ <script type="text/javascript" src ="controller/levelController.js"></script>
+
+ <!-- directive -->
+ <script type="text/javascript" src ="directive/niveauDirective.js"></script>
+<!-- service -->
+ <script type="text/javascript" src ="service/niveauProvider.js"></script>
+
+ 
+</head>
+	<body ng-app="backend"> <!-- backend est le nom du module-->
+
+				<div ng-view>
+
+
+				</div>
+
+
+			
+			<div ng-controller ="categoryList">
+			
+				<div ng-repeat="n in listDesFacultes">
+					{{listDesFacultes.nom}}
+					<p directive-category></p>
+
+				</div>
+			</div>
+			
+	</body>
+</html>
